@@ -55,7 +55,7 @@ export const ProductCard = ({
         product,
       }}
     >
-      <div className={`${styles.productCard} ${className}`} style={style}>
+      <h1 className={`${styles.productCard} ${className}`} style={style}>
         {children({
           count: counter,
           isMaxCountReached: isMaxCountReached,
@@ -70,7 +70,7 @@ export const ProductCard = ({
             <ProductTitle title={product.title} />
 
             <ProductButtons counter={counter} increaseBy={increaseBy} /> */}
-      </div>
+      </h1>
     </Provider>
   );
 };

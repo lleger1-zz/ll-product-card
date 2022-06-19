@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Product, ProductInCart } from "../interfaces/interfaces";
+import { useState } from 'react';
+import { Product, ProductInCart } from '../interfaces/interfaces';
 
 export const useShoppingCart = () => {
   const [shoppingCart, setShoppingCart] = useState<{
@@ -13,8 +13,7 @@ export const useShoppingCart = () => {
     count: number;
     product: Product;
   }) => {
-    setShoppingCart((oldShoppingCart) => {
-      console.log({ count });
+    setShoppingCart(oldShoppingCart => {
       if (count === 0) {
         const { [product.id]: toDelete, ...rest } = oldShoppingCart;
 
